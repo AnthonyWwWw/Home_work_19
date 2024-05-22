@@ -1,0 +1,219 @@
+@import './null.scss';
+
+/////////////////////////////////////////////////////
+///import                                         ///
+/////////////////////////////////////////////////////
+
+/////////////////////////////////////////////////////
+///variables
+$fontFamaliMontserrat: "Montserrat", sans-serif;
+///end-variables
+/////////////////////////////////////////////////////
+
+/////////////////////////////////////////////////////
+///global
+
+///end-global
+/////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////
+///BODY 
+
+body{
+  background-image: url(../sours/img/mother-motherland-monument-sunset-kiev-ukraine.jpg);
+  background-size: cover;
+}
+
+.container{
+  display: flex;
+  justify-content: flex-end;
+  max-width: 3500px;
+}
+
+.section{
+  width: 100%;
+  height: 100%;
+}
+
+section{
+  width: 100%;
+  height: 100vh;
+}
+
+.water{
+  height: 100vh;
+  background-image: url(../sours/img/water.png);
+  animation: water 0.3s linear infinite;
+  z-index: 2;
+  opacity: .5;
+}
+
+@keyframes water{
+    0%{
+      background-position: -10% -10%;
+    }
+    100%{
+      background-position: 20% 100%;
+    }
+}  
+
+.region-selection{
+  margin-top: 5vh;
+  margin-left: 5%;
+  font-size: 50px;
+  font-weight: 600;
+  font-family: 'Montserrat', sans-serif;
+  width: 250px;
+  height: 300px;
+  background: linear-gradient(to bottom, transparent 0%,  rgba(0,0,0,0.9) 100%);
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  border-radius: 20px;
+  transition: all 1s;
+  z-index: 1;
+
+  &:hover{
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  }
+}
+
+.weather-icon{
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  background-repeat: no-repeat;
+  align-items: start;
+}
+
+.region-list{
+  display: flex;
+  flex-direction: column; 
+}
+
+.item-list{
+  margin: 30px 30px 0px 30px;
+  display: inline;
+  cursor: pointer;
+  color: rgb(255, 255, 255);
+  transition-duration: .5s;
+  transition-property: all;
+  position: relative;
+  align-items: center;
+  opacity: 0.7;
+  z-index: 1;
+  
+  &:active{
+    font-size: 40px;
+  }
+
+}
+
+.rait{
+  &::after{
+    content: '';
+    margin-left: 20px;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-image: url(../sours/img/icon-rait.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: invert(1) brightness(2);
+  }
+}
+
+.sun{
+  &::after{
+    content: '';
+    margin-left: 20px;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-image: url(../sours/img/icon-sun-12376321.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: invert(1) brightness(2);
+  }
+}
+
+.menu{
+  display: flex;
+  justify-content: center;
+  margin-right: 20px;
+  min-width: 50px;
+  max-width: 100px;
+  height: 300px;
+  border-radius: 20px;
+  color: rgb(255, 255, 255);
+  background: linear-gradient(to bottom, transparent 0%,  rgba(0,0,0,0.9) 100%);
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  transition-duration: 2s;
+  transition-property: all;
+}
+
+.content{
+  min-width: 600px;
+  height: 300px;
+  border-radius: 20px;
+  color: rgb(255, 255, 255);
+  background: linear-gradient(to bottom, transparent 0%,  rgba(0,0,0,0.9) 100%);
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  transition-duration: 2s;
+  transition-property: all;
+
+  &:hover{
+    box-shadow: none;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  }
+
+  h1{
+    margin: 10px;
+    opacity: 0.6;
+    font-family: $fontFamaliMontserrat;
+    font-weight: 600;
+    font-size: 60px;
+  }
+
+  p{
+    margin: 10px;
+    opacity: 0.6;
+    font-family: $fontFamaliMontserrat;
+    font-weight: 500;
+    font-size: 60px;
+  }
+  
+
+}
+.container-content{
+  display: flex;
+  margin-top: 5vh;
+  margin-right: 5%;
+  margin-left: 20px;
+}
+
+.icon-loading{
+  margin-top: 10px;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  color: rgb(255, 255, 255);
+  filter: invert(100%);
+  opacity: .6;
+
+  &:hover{
+    animation: 1s linear 0s rot;
+  }
+}
+
+@keyframes rot {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+///END_BODY                                     
+////////////////////////////////////////////////////
